@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label "linux-agent1"
+            label "linux-agent"
         }
     }
 
