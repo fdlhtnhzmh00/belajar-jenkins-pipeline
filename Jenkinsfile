@@ -23,6 +23,28 @@ pipeline {
     }
 
     stages {
+        stage("Preparation") {
+            agent {
+                node { 
+                    label "linux-agent" }
+            }
+            stages {
+                stage("Prepare Java") {
+                    steps {
+                        echo "Prepare Java by Fadilah Tun Hazimah"
+                        sh "java -version"
+                    }
+                }
+                stage("Prepare Maven") {
+                    steps {
+                        echo "Prepare Maven by Fadilah Tun Hazimah"
+                        sh "./mvnw --version"
+                    }
+                }
+            }
+        }
+
+
         stage('Prepare') {
 
             environment {
@@ -109,7 +131,7 @@ pipeline {
             agent { 
                 node { 
                     label 'linux-agent' } }
-                    
+
             steps {
                 echo "Release it by Fadilah Tun Hazimah"
                 sh 'echo "Application Released to Production!"'
