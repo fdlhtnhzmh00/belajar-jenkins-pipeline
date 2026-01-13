@@ -7,17 +7,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build process by Fadilah Tun Hazimah'
+                echo "Hello Build 1 by Fadilah Tun Hazimah"
+                echo "Hello Build 2 by Fadilah Tun Hazimah"
+                echo "Hello Build 3 by Fadilah Tun Hazimah"
             }
         }
         stage('Test') {
             steps {
-                echo 'Test process by Fadilah Tun Hazimah'
+                echo "Hello Test 1 by Fadilah Tun Hazimah"
+                echo "Hello Test 2 by Fadilah Tun Hazimah"
+                echo "Hello Test 3 by Fadilah Tun Hazimah"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy process by Fadilah Tun Hazimah'
+                echo "Hello Deploy 1 by Fadilah Tun Hazimah"
+                echo "Hello Deploy 2 by Fadilah Tun Hazimah"
+                echo "Hello Deploy 3 by Fadilah Tun Hazimah"
             }
         }
     }
