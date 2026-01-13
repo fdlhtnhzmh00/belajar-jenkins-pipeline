@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Hello Build 1 by Fadilah Tun Hazimah"
+                sleep(5)
                 echo "Hello Build 2 by Fadilah Tun Hazimah"
                 echo "Hello Build 3 by Fadilah Tun Hazimah"
             }
@@ -15,6 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Hello Test 1 by Fadilah Tun Hazimah"
+                sleep(5)
                 echo "Hello Test 2 by Fadilah Tun Hazimah"
                 echo "Hello Test 3 by Fadilah Tun Hazimah"
             }
@@ -22,6 +24,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Hello Deploy 1 by Fadilah Tun Hazimah"
+                sleep(5)
                 echo "Hello Deploy 2 by Fadilah Tun Hazimah"
                 echo "Hello Deploy 3 by Fadilah Tun Hazimah"
             }
