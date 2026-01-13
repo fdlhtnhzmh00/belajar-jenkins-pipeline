@@ -5,9 +5,9 @@ pipeline {
         AUTHOR = "Fadilah Tun Hazimah"
     }
 
-    triggers {
-        cron ("*/5 * * * *")
-    }
+    //triggers {
+    //    cron ("*/5 * * * *")
+    // }
 
     parameters {
         string(name: "NAME", defaultValue: "Guest", description: "What is your name?")
@@ -81,6 +81,12 @@ pipeline {
             }
         }
         stage('Deploy') {
+            input {
+                message "Fadilah, can we deploy this to production?"
+                ok "Yes, of course"
+                submitter "fdlhtnhzmh,zowy" 
+            }
+
             agent {
         node {
             label "linux-agent" 
