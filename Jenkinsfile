@@ -7,18 +7,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Hello Build 1 by Fadilah Tun Hazimah"
-                sleep(5)
-                echo "Hello Build 2 by Fadilah Tun Hazimah"
-                echo "Hello Build 3 by Fadilah Tun Hazimah"
+                echo "Start Build by Fadilah Tun Hazimah"
+                sh 'chmod +x mvnw'
+                sh './mvnw clean compile test-compile'
+                echo "Finish Build by Fadilah Tun Hazimah"
             }
         }
         stage('Test') {
             steps {
-                echo "Hello Test 1 by Fadilah Tun Hazimah"
-                sleep(5)
-                echo "Hello Test 2 by Fadilah Tun Hazimah"
-                echo "Hello Test 3 by Fadilah Tun Hazimah"
+                echo "Start Test by Fadilah Tun Hazimah"
+                sh './mvnw test'
+                echo "Finish Test by Fadilah Tun Hazimah"
             }
         }
         stage('Deploy') {
