@@ -6,7 +6,12 @@ pipeline {
         EMAIL = "105841118323@student.unismuh.ac.id"
         WEB = "https://pinterest.com/curateaofficial"
     }
-
+    
+    options {
+        disableConcurrentBuilds()
+        timeout(time: 10, unit: 'MINUTES')
+    }
+    
     stages {
         stage('Prepare') {
 
