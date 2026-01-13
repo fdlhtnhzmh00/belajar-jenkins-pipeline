@@ -99,6 +99,23 @@ pipeline {
                 echo "Hello Deploy 3 by Fadilah Tun Hazimah"
             }
         }
+        stage('Release') {
+            when {
+                expression {
+                    return params.DEPLOY
+                }
+            }
+            
+            agent { 
+                node { 
+                    label 'linux-agent' } }
+                    
+            steps {
+                echo "Release it by Fadilah Tun Hazimah"
+                sh 'echo "Application Released to Production!"'
+            }
+        }
+        
     }
     post {
         always {
